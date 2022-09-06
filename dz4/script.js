@@ -49,7 +49,7 @@ function getOperands () {
      let myArr = new Array (quantity)
      for (let j = 0, J = myArr.length; j < J ; j++)
      do {
-          operands = myArr [j] = prompt ('Enter your ' + (+j+1) + ' value', '');
+          operands = myArr [(+j)] = prompt ('Enter your ' + (+j+1) + ' value', '');
      } while(isOperandInvalid(operands));
 
      return myArr;
