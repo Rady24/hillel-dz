@@ -21,8 +21,14 @@ function isOperatorInvalid(val) {
 }
 
 function getOperands(){
-     let array = prompt('Enter your values separated with comma').split(',');
-     return array.map(Number);
+    let operands = [];
+    do{
+        operands = prompt ('Enter your value splitted with comma');    
+    } while (isOperandInvalid(operands));
+    return operands.split(',').map(Number);
+}
+function isOperandInvalid(val) {
+    return val === null || val.trim() === '';
 }
 
 function calculate(values, operation) {
