@@ -28,13 +28,13 @@ function calculateStudentAverageMark(id){
 }
 
 function calculateGroupAverageMark(students){
-    const newArrayMarks = [].concat(students[0].marks,students[1].marks,students[2].marks,students[3].marks,)
+    const newArrayMarks = [].concat(students[0].marks,students[1].marks,students[2].marks,students[3].marks)
     const newArrayMarksSum = newArrayMarks.reduce((acc,item) => acc+item);
     const newArrayMarksAverage = newArrayMarksSum / newArrayMarks.length;
    
     return newArrayMarksAverage;
 }
 
-console.log(calculateGroupAverageMark(students));
+
 
 
