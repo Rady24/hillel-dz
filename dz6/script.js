@@ -18,22 +18,31 @@ const students = [
         id:13,
         name: 'Jean-Baptiste Emanuel Zorg',
         marks: [10, 9, 8, 9 ]
-    }
+    }   
 ]
 
-function calculateStudentAverageMark(id){
-    const marksSum = students[id].marks.reduce((acc,item) => acc+item);
-    const averageMark = marksSum / students[id].marks.length; 
+function getAverage (marksArr){
+    const marksSum = marksArr.reduce((acc,item) => acc+item);
+    const averageMark = marksSum / marksArr.length
     return averageMark;
 }
 
-function calculateGroupAverageMark(students){
-    const newArrayMarks = [].concat(students[0].marks,students[1].marks,students[2].marks,students[3].marks)
-    const newArrayMarksSum = newArrayMarks.reduce((acc,item) => acc+item);
-    const newArrayMarksAverage = newArrayMarksSum / newArrayMarks.length;
-   
-    return newArrayMarksAverage;
+function calculateStudentAverageMark(id){
+    const studentMarks = students[id].marks;
+    return getAverage (studentMarks);
 }
+
+function calculateGroupAverageMark(students){
+
+    
+    let newArrayMarks = [];
+    for (let i = 0; i<students.length; i++){
+        newArrayMarks = newArrayMarks.concat(students[i].marks);
+    }
+
+    return getAverage (newArrayMarks);
+}
+
 
 
 
