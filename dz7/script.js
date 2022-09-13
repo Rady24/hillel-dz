@@ -2,19 +2,10 @@
 function createCalc(a) {
     let result = a;
     return {
-        add:  function (b) {
-            return result+=b;  
-        },
-        sub: function (b) {
-            return result-=b;
-        },
-            
-        div: function (b) {
-            return result /=b;
-        }, 
-        mult: function (b) {
-           return result *=b;
-        }, 
+        add: (b)=> result+=b,  
+        sub: (b)=> result-=b, 
+        div: (b)=> result/=b, 
+        mult:(b)=> result*=b, 
         set: (b) => result=b,
     };
 }
