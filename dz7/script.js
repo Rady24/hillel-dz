@@ -1,19 +1,19 @@
 
 function createCalc(a) {
-    let result = 0;
+    let result = a;
     return {
         add:  function (b) {
-            if (result === 0){return result = a+b} else{return result = result+b}
+            return result+=b;  
         },
         sub: function (b) {
-            if (result === 0){return result = a-b} else{return result = result-b}
+            return result-=b;
         },
             
         div: function (b) {
-            if (result === 0){return result = a/b} else{return result = result/b}
+            return result /=b;
         }, 
         mult: function (b) {
-            if (result === 0){return result = a*b} else{return result = result*b}
+           return result *=b;
         }, 
         set: (b) => result=b,
     };
