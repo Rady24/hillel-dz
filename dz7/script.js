@@ -1,12 +1,11 @@
 
 function createCalc(a) {
-    let result = a;
     return {
-        add: (b)=> result+=b,  
-        sub: (b)=> result-=b, 
-        div: (b)=> result/=b, 
-        mult:(b)=> result*=b, 
-        set: (b) => result=b,
+        add: (b)=> a+=b,  
+        sub: (b)=> a-=b, 
+        div: (b)=> a/=b, 
+        mult:(b)=> a*=b, 
+        set: (b) => a=b,
     };
 }
 
