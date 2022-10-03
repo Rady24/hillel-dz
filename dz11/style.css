@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#newTodoForm{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;  
+  padding: 10px;
+    width: 500px;
+    border: 1px solid;
+    margin: 5px;
+    background-color: lightyellow;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .todo-item.done {
+    background-color: lightgreen;
+  }
+  
+  .todo-item .delete-btn {
+    float: right;
+    margin-right: 10px;
+  }
+  
+  input.invalid-input {
+    background-color: lightcoral;
+  }
+
+  .done {
+    background-color: lightgreen;
+}
+[data-is-checked='true'] {
+  background-color: rgb(112, 208, 155);
+  color: #fff;
+}
