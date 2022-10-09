@@ -1,3 +1,4 @@
+'use strickt'
 const SMALL_SIZE = {
     price: 50,
     callories: 20
@@ -33,17 +34,14 @@ const TOPPING_MAYO = {
 };  
 
 
-function Hamburger(size){
-    this.size = size;
-    this.price = size.price;
-    this.callories = size.callories;
-    
+function Hamburger({price,callories}){
+    this.price = price;
+    this.callories = callories;
 };
 
-Hamburger.prototype.addTopping = function(topping){
-    this.topping = topping;
-    this.price = topping.price + this.price;
-    this.callories = topping.callories + this.callories ;
+Hamburger.prototype.addTopping = function({price,callories}){
+    this.price += price;
+    this.callories += callories;
 };
 Hamburger.prototype.getPrice = function(){
     return this.price;  
@@ -56,24 +54,8 @@ const hamburger = new Hamburger(BIG_SIZE);
 hamburger.addTopping(TOPPING_MAYO);
 hamburger.addTopping(TOPPING_SPICES);
 hamburger.addTopping(TOPPING_POTATO);
+hamburger.addTopping(TOPPING_MAYO);
 
 
 console.log("Price with sauce: " + hamburger.getPrice());
 console.log("Callories with sauce: " + hamburger.getCallories());
-
-
-
-
-
-
-
-
-
-// const hamburger = new Hamburger(SIZE_SMALL);
-// // добавка из майонеза
-// hamburger.addTopping(TOPPING_MAYO);
-// hamburger.addTopping(TOPPING_POTATO);
-
-// console.log("Price with sauce: “ + hamburger.getPrice());
-// console.log("Callories with sauce: “ + hamburger.getCallories());
-
