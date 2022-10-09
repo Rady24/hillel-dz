@@ -1,4 +1,4 @@
-'use strickt'
+'use strict'
 const SMALL_SIZE = {
     price: 50,
     callories: 20
