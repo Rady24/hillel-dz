@@ -1,0 +1,17 @@
+.acc {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.acc-title, .acc-body{
+    height: 50px;
+    border: 1px solid black;
+}
+.acc-body{
+    display:none;
+}
+.acc-body-active{
+    display: block;
+    
+}
