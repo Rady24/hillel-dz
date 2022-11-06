@@ -73,7 +73,7 @@ function generateContactHtml({ id, name, surname, email }) {
 
 function getFormValues() {
     return {
-        id: +idInput.value,
+        id: idInput.value,
         name: nameInput.value,
         surname: surnameInput.value,
         email: emailInput.value,
