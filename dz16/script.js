@@ -99,7 +99,7 @@ function getContactId(el) {
 }
 
 function saveContact(contact) {
-    if (contact.id === 0) {
+    if (contact.id == 0) {
         addContact(contact);
     } else {
         updateContact(contact);
