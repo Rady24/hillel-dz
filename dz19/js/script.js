@@ -9,33 +9,26 @@ data-rbox-series="gallery">
 const containerEl = $('.container');
 let itemsList = [];
 
-init();
-initGallery();
-
-function initGallery(){
-    return $(".example").rbox({
-        'type': 'image',
-      })
-}
-
-
-
-function init() {
-    fetchItems();
-    renderList(itemsList);
-    
-}
+fetchItems();
 
 
 function fetchItems() {
     fetch(API_URL)
-        .then((res) => res.json())
-        .then((data) => {
-            itemsList = data;
-            renderList(itemsList);
-        });
+    .then((res) => res.json())
+    .then((data) => {
+        itemsList = data;
+        renderList(itemsList);
+        initGallery();
+    });
 }
 
+
+function initGallery(){
+    $(".example").rbox({
+        'type': 'image',
+      })
+    
+}
 
 function renderList(list) {
     
@@ -46,6 +39,8 @@ function renderList(list) {
 function generateItemHtml(item) {
     return interpolate(itemTemplate, item)
 }
+
+
 
 
 
