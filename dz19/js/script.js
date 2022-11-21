@@ -24,7 +24,7 @@ function fetchItems() {
 
 
 function initGallery(){
-    $(".example").rbox({
+    $('.example').rbox({
         'type': 'image',
       })
     
